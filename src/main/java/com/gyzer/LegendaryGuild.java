@@ -59,6 +59,10 @@ public class LegendaryGuild extends JavaPlugin {
 
         //载入配置文件
         loadConfigs();
+
+        //设置服务器名称
+        SERVER = configManager.SERVER;
+
         //加载数据库
         initDatabase();
 

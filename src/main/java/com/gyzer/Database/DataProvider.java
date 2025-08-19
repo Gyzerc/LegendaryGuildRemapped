@@ -165,7 +165,7 @@ public abstract class DataProvider extends SerializeUtils {
                         .addTextKey("water_total")
                         .addDoubleKey("points")
                         .addDoubleKey("total_points")
-                        .addIntegerKey("cooldown")
+                        .addLongKey("cooldown")
                         .addBooleanKey("wish")
                         .addBooleanKey("teleport_guild_home")
                         .addTextKey("pvp")

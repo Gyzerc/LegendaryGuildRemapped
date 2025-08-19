@@ -30,6 +30,7 @@ public class Config extends FileProvider {
     public List<String> HOME_BLACK_WORLD;
     public List<String> HOME_BLACK_SERVER;
     public int COOLDOWN;
+    public String SERVER;
     public Config() {
         super("config.yml", "", "./plugins/LegendaryGuildRemapped");
     }
@@ -41,6 +42,7 @@ public class Config extends FileProvider {
         STORE = DataProvider.DatabaseType.getType(getValue("Store","SQLite"));
         LANGUAGE = Lang.getType(getValue("lang","English"));
         CROSS_SERVER = getValue("settings.Cross_Server.enable",false);
+        SERVER = getValue("settings.Cross_Server.server_name","Server");
         DESC_MAX_LENGTH = getValue("settings.guild.introduce-max-line",5);
         NOTICE_MAX_LENGTH = getValue("settings.guild.notice-max-line",5);
 

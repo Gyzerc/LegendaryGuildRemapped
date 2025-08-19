@@ -43,7 +43,7 @@ public class ShopMenu extends MenuDraw {
                         String limit = "";
                         if (!shopItem.getType().equals(ShopType.UNLIMITED)){
                             limit = provider.getPlaceHolder(shopItem.getType().name().toLowerCase())
-                                    .replace("%left%",""+shopData.getBuyAmount(p.getName()))
+                                    .replace("%left%",""+shopData.getBuyAmount(shopItem.getId()))
                                     .replace("%max%",""+shopItem.getLimitAmount());
                         }
 

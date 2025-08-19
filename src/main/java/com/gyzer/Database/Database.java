@@ -86,7 +86,7 @@ public class Database {
                     user.getCooldown(),        // 9
                     user.isWish(),             // 10
                     user.isTeleport_guild_home(), // 11
-                    user.getPvp()              // 12 枚举类型会自动处理
+                    user.getPvp().name()              // 12 枚举类型会自动处理
             );
         } catch (SQLException ex) {
             // 自定义异常包含更多上下文信息

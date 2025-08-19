@@ -32,7 +32,7 @@ public class GuildShopConfigManager extends FileProvider {
                 ItemStack i = ItemUtils.readItem(section,shopId);
                 List<String> requirements = MsgUtils.color(section.getStringList(shopId+".requirements"));
                 List<String> runs = MsgUtils.color(section.getStringList(shopId+".run"));
-                ShopType type = getType(section.getString(shopId+".buy_limit.type","Unlimited"));
+                ShopType type = getType(section.getString(shopId+".buy_limit.type","unlimited"));
                 int limit = section.getInt(shopId+".buy_limit.amount",-1);
                 cache.put(shopId,new ShopItem(shopId,i,type,limit,requirements,runs));
                 a++;

@@ -1,0 +1,52 @@
+placeholder:
+  luck_null: '&cNo member'
+  claim_state_yes: '&e(Claimed)'
+  claim_state_no: '&a(Unclaimed)'
+  wait_claim: '&b&l➡ &7Click to snatching'
+  already_claim: '&b&l➡ &cYou are already claimed'
+gui:
+  title: '&3Guild Redpackets'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '##~~~~~##'
+    - '##~~~~~##'
+    - '#########'
+    - '###PBN###'
+  Items:
+    '~':
+      display: '&fRed packet %placeholder_state%'
+      material: APPLE
+      data: 0
+      model: 0
+      lore:
+        - '&fOwner: &e%owner%'
+        - '&fDate: &e%date%'
+        - '&fBalance: &e%less%/%total%'
+        - '&fAmount: &e%less_amount%/%amount%'
+        - '&fLucky King: &e%luck% - %luck_value%'
+        - ''
+        - '&8[ %placeholder_claim% &8]'
+      function:
+        type: redpacket
+    'B':
+      display: '&cBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next

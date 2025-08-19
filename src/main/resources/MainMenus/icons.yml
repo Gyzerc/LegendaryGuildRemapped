@@ -1,0 +1,41 @@
+placeholder:
+  locked: '&cRight Click &eto nlock'
+  unlocked: '&aLeft Click &eto put'
+  putting: '&ePutting'
+gui:
+  title: '&5Guidl Icons'
+  layout:
+    - '#########'
+    - '##~~~~~##'
+    - '##~~~~~##'
+    - '###PBN###'
+  Items:
+    '~':
+      display: '%icon%'
+      lore:
+        - '%description%'
+        - ''
+        - '%placeholder%'
+      function:
+        type: icon
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next
+    'B':
+      display: '&eBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back

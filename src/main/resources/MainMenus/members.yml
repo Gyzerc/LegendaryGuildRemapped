@@ -1,0 +1,54 @@
+placeholder:
+  sort_position: 'Position Sort'
+  sort_points: 'Total Points Sort'
+  sort_date: 'Join Date Sort'
+gui:
+  title: '&3Guild Members - &0%sort%'
+  layout:
+    - '#########'
+    - '##~~~~~##'
+    - '##~~~~~##'
+    - '###PSN###'
+  Items:
+    '~':
+      material: BOOK_AND_QUILL
+      data: 0
+      display: '%player%'
+      #你可以使用 PlaceholderAPI 的变量
+      lore:
+        - ''
+        - '&fPosition: &a%position%'
+        - '&fJoin date: &a%date%'
+        - '&fTotal Points: &a%total_points%'
+        - '&fActivity: &a%activity%'
+        - '&fHistory Activity: &a%total_activity%'
+        - ''
+        #这里使用的是 PAPI变量
+        - '&fLevel: &a%player_level%'
+        - '&fExp: &a%player_exp%'
+        - ''
+        - '&7- &cSHIFT+Right click &7to kick form guild'
+      function:
+        type: member
+    'S':
+      display: '&f&l< &dSwitching sorting methods &f&l>'
+      material: ENDER_PEARL
+      data: 0
+      lore:
+        - '&f&l# &eCurrent by &a%placeholder_sort%'
+      function:
+        type: sort
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next

@@ -1,0 +1,40 @@
+gui:
+  title: '&c&lGuild Buff Shop'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '#@#@#@#@#'
+    - '#########'
+    - '###PBN###'
+  Items:
+    '@':
+      function:
+        type: buff
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next
+    'B':
+      display: '&eBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none

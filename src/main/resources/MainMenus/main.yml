@@ -1,0 +1,237 @@
+gui:
+  title: '&6&lGuild Menu'
+  layout:
+    - '#~~~~~~~#'
+    - '#~abcde~#'
+    - '#~~~~~~~#'
+    - '#~fghij~#'
+    - '#~klmno~#'
+    - '#~pqr  ~#'
+  Items:
+    'a':
+      material: SIGN
+      data: 0
+      display: '&3Infomation'
+      lore:
+        - '&2&oCreated in %date%'
+        - ''
+        - '&fOwner: &a%owner%'
+        - '&fLevel: &a%level% &8(&e%exp%/%next%&8)'
+        - '&fTree Level: &a%treelevel% &8(&e%treeexp%/%treenext%&8)'
+        - '&fMoney: &a%money%'
+        - '&fMembers: &a%members%/%maxmembers%'
+        - '&fWeek Activity: &a%activity%'
+        - '&fHistory Activity: &a%total_activity%'
+        - ''
+        - '&fIntroduction:'
+        - '%intro%'
+        - ''
+        - '&f[ &bLeft click to add a guild introduction &f]'
+        - '&f[ &cRight click to delete the last introduction &f]'
+      function:
+        type: information
+    'b':
+      material: BOOK
+      data: 0
+      display: '&3Guild Notice'
+      lore:
+        - '&f - &e%notice%'
+        - ''
+        - '&f[ &bLeft click to add a guild notice &f]'
+        - '&f[ &cRight click to delete the last notice &f]'
+      function:
+        type: notice
+    'c':
+      material: EYE_OF_ENDER
+      data: 0
+      display: '&bGuild Home'
+      lore:
+        - '&fReturn or set &6guild home'
+        - ''
+        - '&f[ &bLeft click to return to guild home &f]'
+        - '&f[ &cRight click to set guild home &f]'
+      function:
+        type: home
+    'd':
+      material: SAPLING
+      data: 0
+      display: '&bGuild Tree'
+      lore:
+        - '&fEnter the &6Guild Tree &fmenu'
+        - '&fWatering and making wishes for the tree &ehere'
+        - ''
+        - '&c&lTree information:'
+        - ' &f· Level: &b%level%'
+        - ' &f· Exp: &b%exp%/%next% &8(%bar%&8)'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: tree
+    'e':
+      material: BEACON
+      data: 0
+      display: '&bGuild Shop'
+      lore:
+        - '&fEnter the &6Guild Shop &fmenu'
+        - '&fPurchase products here using &eguild points'
+        - ''
+        - '&c&lInformation:'
+        - ' &f· Current available points: &b%points%'
+        - ' &f· Historical points: &b%total_points%'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: shop
+    'f':
+      material: EXP_BOTTLE
+      data: 0
+      display: '&aActivity Rewards'
+      lore:
+        - '&fEnter the &6Activity Rewards &fmenu'
+        - '&fClaim the &eActivity Rewards'
+        - ' &f· Current activity: &b%points%'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: activity
+    'g':
+      material: EMERALD
+      data: 0
+      display: '&cContribute Treasures'
+      lore:
+        - '&fEnter the &6Contribute Treasures &fmenu'
+        - '&fUse &eContribute Treasure &fto obtain &eguild points and guild experience.'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: tributes
+    'h':
+      material: JUKEBOX
+      data: 0
+      display: '&cGuild Red Packets'
+      lore:
+        - '&fEnter the &6Guild red packets &fmenu'
+        - '&fGrab the &ered packets distributed by guild members'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: redpackets
+    'j':
+      material: REDSTONE
+      data: 0
+      display: '&cGuild Buff'
+      lore:
+        - '&fEnter the &6Guild Buff &fmenu'
+        - '&fView and upgrade guild buff here'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: buff
+    'k':
+      material: GOLD_INGOT
+      data: 0
+      display: '&dDonate money'
+      lore:
+        - '&fDonate &6money &fto the guild to gain contribution points'
+        - ''
+        - '&f[ &euse &a/guild money [Amount] &f]'
+      function:
+        type: none
+    'l':
+      material: NETHER_STAR
+      data: 0
+      display: '&6Guild Positions'
+      lore:
+        - '&fView all &6positions &fand current members in the guild'
+        - ''
+        - '&c&lInfomation:'
+        - ' &f· Your Position: %position%'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: positions
+    'm':
+      material: SKULL_ITEM
+      data: 0
+      display: '&2Guild Members'
+      lore:
+        - '&fLook &6all &fguild members'
+        - ''
+        - '&c&lInfomation:'
+        - ' &f· Current members: %members%/%maxmembers%'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: members
+    'n':
+      material: BOOK_AND_QUILL
+      data: 0
+      display: '&eApplications'
+      lore:
+        - '&fView all pending &6membership applications in the guild'
+        - ''
+        - '&c&lInformation:'
+        - ' &f· Amount: %amount%'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: applications
+    'o':
+      material: PAPER
+      data: 0
+      display: '&7Guild Icons'
+      lore:
+        - '&fChange guilds &6display icon'
+        - ''
+        - '&f[ &aClick to open &f]'
+      function:
+        type: icon
+    'p':
+      material: SHIELD
+      data: 0
+      display: '&cGuild PVP'
+      lore:
+        - '&fSwitch Guild&6 PVP Protection'
+        - '&fWhen enabled,you will not receive damage from &eguild players'
+        - '&fAnd it will not cause damage to &eand guild players'
+        - ''
+        - '&f[ &aClick to switch &f]'
+      function:
+        type: pvp
+    'q':
+      material: STRING
+      data: 0
+      display: '&bGuild Chat'
+      lore:
+        - '&fSwitch Guild &6chat'
+        - '&fWhen enabled, your chat will not be&e non guild'
+        - '&fplayers see.'
+        - ''
+        - '&f[ &aClick to switch &f]'
+      function:
+        type: chat
+    'r':
+      material: APPLE
+      data: 0
+      display: '&bTeam Shop'
+      lore:
+        - '&fGuild group buying products, randomly refreshed daily'
+        - '&fEach member can negotiate once'
+
+        - '&f[ &aClick to open &f]'
+      function:
+        type: teamshop
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none
+    '~':
+      material: STAINED_GLASS_PANE
+      data: 15
+      display: '&f '
+      lore: []
+      function:
+        type: none

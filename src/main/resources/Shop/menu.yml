@@ -1,0 +1,46 @@
+placeholder:
+  Day: '&cDaily Limit: &a%left%/%max%'
+  Week: '&cWeek Limit: &a%left%/%max%'
+  Month: '&cMonth Limit: &a%left%/%max%'
+  Once: '&cLimit: &a%left%/%max%'
+gui:
+  title: '&c&lGuild Shop'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '#aaaaaaa#'
+    - 'PaaaaaaaN'
+    - '#aaaaaaa#'
+    - '####B####'
+  Items:
+    'a':
+      function:
+        type: shop
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next
+    'B':
+      display: '&eBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none

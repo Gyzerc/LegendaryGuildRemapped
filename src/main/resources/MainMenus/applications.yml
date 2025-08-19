@@ -1,0 +1,46 @@
+gui:
+  title: '&2Guild Applications'
+  layout:
+    - '#########'
+    - '##~~~~~##'
+    - '##~~~~~##'
+    - '###PBN###'
+  Items:
+    '~':
+      material: BOOK
+      data: 0
+      display: '%player%'
+      lore:
+        - ''
+        - '&fDate: &a%apply_date%'
+        - ''
+        #这里使用的是 PAPI变量
+        #Here use PlaceholderAPI
+        - '&fLevel: %player_level%'
+        - '&fExp: %player_exp%'
+        - ''
+        - '&7- &3Left Click to agree'
+        - '&7- &CRight Click to disagree'
+      function:
+        type: application
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next
+    'B':
+      display: '&eBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back

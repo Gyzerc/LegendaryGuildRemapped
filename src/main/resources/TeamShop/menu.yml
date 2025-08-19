@@ -1,0 +1,49 @@
+placeholder:
+  #Product purchase restriction variables
+  limit: '&c&l| &fLimited &e%purchased%/%limit%'
+  #Variables displayed after bargaining
+  bargains-already: '&a%player% - %bargain-price%'
+  #Variables displayed before bargaining
+  bargains-not: '&7%player% - 0.0'
+  whether-bargain-already: '&f[&aBargained&f] '
+  whether_bargain-wait: '&f[&eNegotiable&f] '
+gui:
+  title: '&c&lGuild Team Shop'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '#B##i#b##'
+    - '#########'
+  Items:
+    'i':
+      function:
+        type: item
+    'b':
+      display: '&3&lBargaining Information List &e(%bargain%/%members%)'
+      material: PAPER
+      data: 0
+      model: 0
+      lore:
+        #You can add more %bargains% for display on one page
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - '&f- %placeholder_bargains%'
+        - ''
+        - '&aLeft Click &7to toggle next page'
+        - '&aRight Click &7to toggle previous page'
+      function:
+        type: bargains
+    'B':
+      display: '&eBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back

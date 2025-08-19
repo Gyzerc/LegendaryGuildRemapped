@@ -1,0 +1,33 @@
+gui:
+  title: '&6&lGuild Tree'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '#~~~~~~~#'
+    - '#~~~~~~~#'
+    - '####C####'
+  Items:
+    '~':
+      function:
+        type: tribute
+    'C':
+      display: '&bSubmit these tributes'
+      material: END_CRYSTAL
+      data: 0
+      model: 0
+      lore:
+        - ''
+        - '&f Their value :'
+        - '&f  &a%points% &fGuild Points'
+        - '&f  &a%exp% &fGuild Exp'
+        - ''
+        - '&f[ &eClick to submit &f]'
+      function:
+        type: confirm
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none

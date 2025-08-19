@@ -1,0 +1,20 @@
+name: LegendaryGuildRemapped
+version: 6.0.1
+author: Gyzer
+folia-supported: true
+main: com.gyzer.LegendaryGuild
+depend:
+  - Vault
+  - PlaceholderAPI
+  - ProtocolLib
+softdepend:
+  - PlayerPoints
+  - AttributePlus
+  - SX-Attribute
+  - MythicLib
+commands:
+  LegendaryGuildRemapped:
+    aliases:
+      - lgr
+      - guilds
+      - lguild

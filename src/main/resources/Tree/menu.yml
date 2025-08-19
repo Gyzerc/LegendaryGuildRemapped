@@ -1,0 +1,130 @@
+gui:
+  title: '&6&lGuild Tree'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#~~~~~~~#'
+    - '#~~~a~~~#'
+    - '#~~~b~~~#'
+    - '#^^^^^^^#'
+    - '#^1 234^#'
+    - '#^^^^^^^#'
+  Items:
+    'a':
+      function:
+        type: tree
+    'b':
+      display: '&eWish'
+      material: NETHER_STAR
+      data: 0
+      model: 0
+      lore:
+        - ''
+        - '&fMake a wish once a day to receive a gift from the tree'
+        - '&fThe higher the level, the better the reward obtained.'
+        - ''
+        - '&f[ &aClick to wish &f]'
+      function:
+        #none:点击后没有任何效果 &  No effect after clicking
+        #cmd:点击后执行指令 &  Execute command after clicking
+        # - format：
+        # - - [player]/spawn 玩家发送指令 & Players send commands
+        # - - [op]spawn 玩家以OP权限发送指令 & Players send commands with OP permission
+        # - - [console]spawn %player% 从后台执行指令 & Execute commands from the console
+        # - - 例子 & For Example：
+        # - - - fuction:
+        # - - -  type: cmd
+        # - - -  value: [player]/spawn
+        #close:点击后关闭菜单 & Click to close the menu
+        #back:点击后返回公会主界面 & Click to return to the main interface of the guild
+        #wish：神树许愿 & The guild tree makes a wish
+        #pot：浇水壶 & Watering pot
+        type: wish
+    '1':
+      display: '&3Damaged pot'
+      material: BUCKET
+      data: 0
+      model: 0
+      #%use% 为今日该水壶使用次数
+      #%use% is the number of times the kettle has been used today
+      lore:
+        - '&f '
+        - '&7Price: &aFree'
+        - '&7Exp: &a1'
+        - '&f'
+        - '&cLimited to &a%use%/3 &ctimes per day.'
+      function:
+        type: pot
+        #对应着 WaterPots.yml 中的水壶ID & Corresponding to the water pot ID in WaterPots.yml
+        value: pot1
+    '2':
+      display: '&aRare pot'
+      material: WATER_BUCKET
+      data: 0
+      model: 0
+      #%use% 为今日该水壶使用次数
+      #%use% is the number of times the kettle has been used today
+      lore:
+        - '&f '
+        - '&7Pirce: &a1000Guild Money'
+        - '&7Exp: &a5'
+        - '&f'
+        - '&cLimited to &a%use%/10 &ctimes per day.'
+      function:
+        type: pot
+        #对应着 WaterPots.yml 中的水壶ID & Corresponding to the water pot ID in WaterPots.yml
+        value: pot2
+    '3':
+      display: '&5Epic pot'
+      material: LAVA_BUCKET
+      data: 0
+      model: 0
+      #%use% 为今日该水壶使用次数
+      #%use% is the number of times the kettle has been used today
+      lore:
+        - '&f '
+        - '&7Price: &a500 Points'
+        - '&7Exp: &a50'
+        - '&f'
+        - '&cLimited to &a%use%/3 &ctimes per day.'
+      function:
+        type: pot
+        #对应着 WaterPots.yml 中的水壶ID & Corresponding to the water pot ID in WaterPots.yml
+        value: pot3
+    '4':
+      display: '&6Super pot'
+      material: LAVA_BUCKET
+      data: 0
+      model: 0
+      #%use% 为今日该水壶使用次数
+      #%use% is the number of times the kettle has been used today
+      lore:
+        - '&f '
+        - '&7Price: &c高级水壶兑换权券 &a×3'
+        - '&7Exp: &a200'
+        - '&f'
+        - '&cLimited to &a%use%/1 &ctimes per day.'
+      function:
+        type: pot
+        #对应着 WaterPots.yml 中的水壶ID & Corresponding to the water pot ID in WaterPots.yml
+        value: pot4
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none
+    '~':
+      material: STAINED_GLASS_PANE
+      data: 15
+      display: '&f '
+      lore: []
+      function:
+        type: none
+    '^':
+      material: STAINED_GLASS_PANE
+      data: 1
+      display: '&f '
+      lore: []
+      function:
+        type: none

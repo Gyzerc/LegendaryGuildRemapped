@@ -1,0 +1,77 @@
+gui:
+  title: '&6&lGuild Positions'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#~~~0~~~#'
+    - '#~~1~2~~#'
+    - '#~~~B~~~#'
+  Items:
+    '0':
+      display: '&9Position &f- %display%'
+      material: DIAMOND_HELMET
+      data: 0
+      model: 0
+      lore:
+        - ''
+        - '&eMembers: &a%amount%'
+        - ''
+        - '&2Buff:'
+        - '&f - Damage +20'
+        - '&3Owner:'
+        - '&f · &b%members%'
+      function:
+        type: position
+        value: president
+    '1':
+      display: '&9Position &f- %display%'
+      material: GOLD_HELMET
+      data: 0
+      model: 0
+      lore:
+        - ''
+        - '&eMembers: &a%amount%'
+        - ''
+        - '&2Buff:'
+        - '&f - Damage +15'
+        - '&3Names:'
+        - '&f · &b%members%'
+        - ''
+        - '&8[ &aLeft click to appoint &8]'
+        - '&8[ &cRight click to cancel &8]'
+      function:
+        type: position
+        value: elder
+    '2':
+      display: '&9Position &f- %display%'
+      material: IRON_HELMET
+      data: 0
+      model: 0
+      lore:
+        - ''
+        - '&eMembers: &a%amount%'
+        - ''
+        - '&2Buff:'
+        - '&f - Damage +10'
+        - '&3Names:'
+        - '&f · &b%members%'
+        - ''
+        - '&8[ &aLeft click to appoint &8]'
+        - '&8[ &cRight click to cancel &8]'
+      function:
+        type: position
+        value: elitemember
+    'B':
+      display: '&cBack'
+      material: BARRIER
+      data: 0
+      model: 0
+      lore: []
+      function:
+        type: back
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none

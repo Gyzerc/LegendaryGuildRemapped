@@ -1,0 +1,10 @@
+enable: true
+#公会红包相关设置
+#Guild red packet related settings
+redpacket:
+  #最低红包金额
+  #Minimum red packet money
+  min_total: 100
+  #最低红包个数
+  #Minimum number of red packet
+  min_amount: 2

@@ -1,0 +1,39 @@
+#当玩家加入一个公会默认的职位ID
+default: member
+#公会会长的职位ID
+owner: president
+#职位列表（按格式向下添加）
+positions:
+  president:
+    #职位权重 用于成员列表界面的按公会职位排序
+    weight: 0
+    #展示名称
+    display: '&6President'
+    #buff （需Buff.yml中开启该模块功能才生效）
+    attrs:
+      - '攻击力 +20'
+  member:
+    weight: 3
+    display: '&fMember'
+    attrs: []
+    #是否可以同意入会申请
+    accept: false
+    #是否可以踢出公会成员
+    kick: false
+  elitemember:
+    weight: 2
+    display: '&aElite Member'
+    #最多可以任命多少个该职位的人数
+    max: 5
+    attrs:
+      - '攻击力 +10'
+    accept: false
+    kick: false
+  elder:
+    weight: 1
+    display: '&eElder'
+    max: 2
+    attrs:
+      - '攻击力 +15'
+    accept: true
+    kick: true

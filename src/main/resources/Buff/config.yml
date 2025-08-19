@@ -1,0 +1,135 @@
+#是否启用该功能
+# Is this feature enabled
+enable: true
+#属性插件
+# Attribute Plugin
+#可选插件： AP3 (AttributesPlus3.0) , AP2 (AttributesPlus2.0) , SX2 (Sx-Attributes2.0), SX3 (Sx-Attributes3.0) ,MythicLib(同时也对MMOITEMS的属性生效)
+plugin: AP3
+buffs:
+  buff1:
+    #buff的名称
+    display: '&cAttack Damage BUFF'
+    #buff的最高等级
+    max: 5
+    #buff各级的花费以及属性
+    upgrade:
+      0:
+        #该等级在BUFF界面中显示的图标
+        preview:
+          display: '%buff_display% &f- &e%buff_level%/%buff_maxlevel%'
+          material: NETHER_STAR
+          data: 0
+          model: 0
+          lore:
+            - '&fIncrease attack damage to guild members'
+            - ''
+            - '&a&lNext level:'
+            - '&7 &7 - Attack Damage +5'
+            - '&c&lUpgrade cost:'
+            - '&7 &7 Guild Money ×1000'
+            - ''
+            - '&f[ &bClick to LevelUp &f]'
+      1:
+        #该等级在BUFF界面中显示的图标
+        preview:
+          display: '%buff_display% &f- &e%buff_level%/%buff_maxlevel%'
+          material: NETHER_STAR
+          data: 0
+          model: 0
+          lore:
+            - '&fIncrease attack damage to guild members'
+            - ''
+            - '&d&lCurrent level:'
+            - '&7 &7 - Attack Damage +5'
+            - '&a&lNext level:'
+            - '&7 &7 - Attack Damage +25'
+            - '&c&lUpgrade cost:'
+            - '&7 &7 Guild Money ×50000'
+            - ''
+            - '&f[ &bClick to LevelUp &f]'
+        #从上一级升到该级的花费
+        requirements:
+          - 'guild_money;10000'
+        #生效的属性
+        attr:
+          - '攻击力 +5'
+      2:
+        preview:
+          display: '%buff_display% &f- &e%buff_level%/%buff_maxlevel%'
+          material: NETHER_STAR
+          data: 0
+          model: 0
+          lore:
+            - '&fIncrease attack damage to guild members'
+            - ''
+            - '&d&lCurrent level:'
+            - '&7 &7 - Attack Damage +25'
+            - '&a&lNext level:'
+            - '&7 &7 - Attack Damage +55'
+            - '&c&lUpgrade cost:'
+            - '&7 &7 Guild Money ×100000'
+            - ''
+            - '&f[ &bClick to LevelUp &f]'
+        requirements:
+          - 'guild_money;50000'
+        attr:
+          - '攻击力 +25'
+      3:
+        preview:
+          display: '%buff_display% &f- &e%buff_level%/%buff_maxlevel%'
+          material: NETHER_STAR
+          data: 0
+          model: 0
+          lore:
+            - '&fIncrease attack damage to guild members'
+            - ''
+            - '&d&lCurrent level:'
+            - '&7 &7 - Attack Damage +55'
+            - '&a&lNext level:'
+            - '&7 &7 - Attack Damage +100'
+            - '&c&lUpgrade cost:'
+            - '&7 &7 Guild Money ×500000'
+            - ''
+            - '&f[ &bClick to LevelUp &f]'
+        requirements:
+          - 'guild_money;100000'
+        attr:
+          - '攻击力 +55'
+      4:
+        preview:
+          display: '%buff_display% &f- &e%buff_level%/%buff_maxlevel%'
+          material: NETHER_STAR
+          data: 0
+          model: 0
+          lore:
+            - '&fIncrease attack damage to guild members'
+            - ''
+            - '&d&lCurrent level:'
+            - '&7 &7 - Attack Damage +100'
+            - '&a&lNext level:'
+            - '&7 &7 - Attack Damage +250'
+            - '&c&lUpgrade cost:'
+            - '&7 &7 Guild Money ×1000000'
+            - ''
+            - '&f[ &bClick to LevelUp &f]'
+        requirements:
+          - 'guild_money;500000'
+        attr:
+          - '攻击力 +100'
+      5:
+        preview:
+          display: '%buff_display% &f- &e%buff_level%/%buff_maxlevel%'
+          material: NETHER_STAR
+          data: 0
+          model: 0
+          lore:
+            - '&fIncrease attack damage to guild members'
+            - ''
+            - '&d&lCurrent level:'
+            - '&7 &7 - Attack Damage +250'
+            - ''
+            - '&4Max Level.'
+        requirements:
+          - 'guild_money;1000000'
+        attr:
+          - '攻击力 +250'

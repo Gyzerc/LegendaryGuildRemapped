@@ -1,0 +1,98 @@
+placeholder:
+  wait: '&aUnclaimed'
+  already: '&eAlready claimed'
+  cant: '&cCant claim'
+gui:
+  title: '&a&lActivity Rewards'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '#1#2#3#4#'
+    - '####B####'
+  Items:
+    '1':
+      display: '&7Activity Reward.1'
+      material: COAL
+      data: 0
+      model: 0
+      lore:
+        - '&3Activity requirements: &f500'
+        - '&3Current guild activity: &f%activity%'
+        - ''
+        - '&a&lRewards:'
+        - '&f - Guild Points ×50'
+        - '&f - Coin ×100'
+        - ''
+        - '&8[ %placeholder% &8]'
+      function:
+        type: activity
+        #对应者 /Activity/config.yml 的 id
+        value: rewards1
+    '2':
+      display: '&7Activity Reward.2'
+      material: IRON_INGOT
+      data: 0
+      model: 0
+      lore:
+        - '&3Activity requirements: &f2000'
+        - '&3Current guild activity: &f%activity%'
+        - ''
+        - '&a&lRewards:'
+        - '&f - Guild Points ×150'
+        - '&f - Coin ×500'
+        - ''
+        - '&8[ %placeholder% &8]'
+      function:
+        type: activity
+        #对应者 /Activity/config.yml 的 id
+        value: rewards2
+    '3':
+      display: '&7Activity Reward.3'
+      material: GOLD_INGOT
+      data: 0
+      model: 0
+      lore:
+        - '&3Activity requirements: &f6000'
+        - '&3Current guild activity: &f%activity%'
+        - ''
+        - '&a&lRewards:'
+        - '&f - Guild Points ×300'
+        - '&f - Coin ×1000'
+        - ''
+        - '&8[ %placeholder% &8]'
+      function:
+        type: activity
+        #对应者 /Activity/config.yml 的 id
+        value: rewards3
+    '4':
+      display: '&7Activity Reward.4'
+      material: DIAMOND
+      data: 0
+      model: 0
+      lore:
+        - '&3Activity requirements: &f10000'
+        - '&3Current guild activity: &f%activity%'
+        - ''
+        - '&a&lRewards:'
+        - '&f - Guild Points ×500'
+        - '&f - Coin ×2000'
+        - ''
+        - '&8[ %placeholder% &8]'
+      function:
+        type: activity
+        #对应者 /Activity/config.yml 的 id
+        value: rewards4
+    'B':
+      display: '&cBack'
+      material: BARRIER
+      data: 0
+      lore: []
+      function:
+        type: back
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none

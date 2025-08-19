@@ -65,7 +65,7 @@ public class PlayerJoinEvent implements Listener {
 
                             Location location = guild.getHome().getLocation().orElse(null);
                             if (location != null) {
-                                p.teleport(location);
+                                legendaryGuild.async(()->p.teleport(location));
                                 if (config.HOME_SOUND_TELEPORT != null) {
                                     p.playSound(p.getLocation(), config.HOME_SOUND_TELEPORT, 1, 1);
                                 }

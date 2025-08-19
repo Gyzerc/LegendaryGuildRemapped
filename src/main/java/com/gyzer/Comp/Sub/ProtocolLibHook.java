@@ -105,8 +105,7 @@ public class ProtocolLibHook extends Hook {
                                     return;
                             }
                         }
-                        MainMenu menuPanel = new MainMenu(p);
-                        legendaryGuild.sync(()->menuPanel.open());
+                        openMain(p);
                         return;
                     }
                     if (user.isChat()) {
@@ -130,7 +129,7 @@ public class ProtocolLibHook extends Hook {
 
     private void openMain(Player p) {
         MainMenu menuPanel = new MainMenu(p);
-        legendaryGuild.sync(()->menuPanel.open());
+        legendaryGuild.async(()->menuPanel.open());
     }
 
     public class Input {

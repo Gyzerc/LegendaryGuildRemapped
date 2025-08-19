@@ -33,8 +33,15 @@ public class GuildsManager {
         return getGuilds().contains(guildName);
     }
 
-    public void removeGuildCache(String guild){
-        caches.remove(guild);
+    public void update(String guild) {
+        Guild data = legendaryGuild.getDatabaseManager().getGuild(guild).orElse(null);
+        if (data != null) {
+            caches.put(guild, data);
+        }
+    }
+
+    public void removeGuildCache(String string) {
+        caches.remove(string);
     }
 
 
@@ -198,7 +205,7 @@ public class GuildsManager {
     }
 
     public List<String> getGuilds(){
-        return legendaryGuild.getDatabaseManager().getGuilds();
+        return caches.keySet().stream().collect(Collectors.toList());
     }
 
     public void loadGuilds(){

@@ -27,7 +27,7 @@ public class Commands implements CommandExecutor, TabCompleter {
         commands = new LinkedHashMap<>();
         admin_commands = new HashMap<>();
 
-        //commands.put("list",new ListCommand());
+        commands.put("list",new ListCommand());
         commands.put("open",new OpenCommand());
         commands.put("join",new JoinCommand());
         commands.put("create",new CreateGuildCommand());

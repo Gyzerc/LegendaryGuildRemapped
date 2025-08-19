@@ -37,7 +37,7 @@ public class NetWorkHandle extends NetWork implements PluginMessageListener {
                 break;
             }
             case UPDATE_GUILD: {
-                legendaryGuild.getGuildsManager().removeGuildCache(value);
+                legendaryGuild.getGuildsManager().update(value);
                 break;
             }
             case REMOVE_GUILD: {

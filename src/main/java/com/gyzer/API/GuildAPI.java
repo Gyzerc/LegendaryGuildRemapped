@@ -691,7 +691,7 @@ public class GuildAPI {
         PlayerMoveEvent.deletePlayerWaitTeleport(p.getName());
         if (location.getServer().equals(legendaryGuild.SERVER)){
             if (location.getLocation().isPresent()){
-                legendaryGuild.sync(()->
+                legendaryGuild.async(()->
                 {
                     p.teleport(location.getLocation().get());
                     p.sendMessage(lang.plugin+lang.home_teleport);

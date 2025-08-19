@@ -1,0 +1,76 @@
+placeholder:
+  sort_activity: 'Activity'
+  sort_members: 'Member Amount'
+  sort_money: 'Guild Money'
+  sort_level: 'Guild Level'
+  sort_treelevel: 'Guild Tree Level'
+  sort_default: 'Default'
+gui:
+  title: '&6&lGuild List'
+  sound: ENTITY_PLAYER_LEVELUP
+  layout:
+    - '#########'
+    - '##~~~~~##'
+    - '##~~~~~##'
+    - '##~~~~~##'
+    - '###PSN###'
+    - '#########'
+  Items:
+    '~':
+      display: '%guild%'
+      #公会默认材质 （当公会设置了其他公会图标则显示设置的材质，下方的是初始图标）
+      #Guild default material (when the guild has set other guild icons, the set material will be displayed, with the initial icon below)
+      material: ITEM_FRAME
+      data: 0
+      model: 0
+      lore:
+        - '&8&oCreate date &n%date%'
+        - ' '
+        - '&6&lInformation'
+        - ' &fOwner: &a%owner%'
+        - ' &fLevel: &a%level%'
+        - ' &fExp: &a%exp%/%exp_next%'
+        - ' &fMoney: &a%money%'
+        - ' &fMembers: &a%members%/%maxmembers%'
+        - ' &fWeek Activity: &a%activity%'
+        - ' &fHistory Activity: &a%total_activity%'
+        - ' '
+        - '&c&lGuild tree information'
+        - ' &fLevel: &a%treelevel%'
+        - ' &fExp: &a%treeexp%/%treeexp_next%'
+        - ' '
+        - '&2&lIntroduction:'
+        - '%intro%'
+        - ' '
+        - '&b&l➡ &7Click to join the guild'
+      function:
+        type: guild
+    'P':
+      display: '&ePrevious Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: pre
+    'N':
+      display: '&eNext Page'
+      material: ARROW
+      data: 0
+      lore: []
+      function:
+        type: next
+    'S':
+      display: '&f&l< &dSwitching sorting methods &f&l>'
+      material: ENDER_PEARL
+      data: 0
+      lore:
+        - '&f&l# &eCurrent by &a%placeholder_sort%'
+      function:
+        type: sort
+    '#':
+      material: STAINED_GLASS_PANE
+      data: 14
+      display: '&f '
+      lore: []
+      function:
+        type: none

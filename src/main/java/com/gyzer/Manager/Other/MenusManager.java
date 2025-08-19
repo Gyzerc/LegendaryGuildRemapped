@@ -2,8 +2,8 @@ package com.gyzer.Manager.Other;
 
 import com.gyzer.Menu.MenuProvider;
 
-
 public class MenusManager {
+    public MenuProvider LIST;
     public MenuProvider BUFF;
     public MenuProvider TEAMSHOP;
     public MenuProvider REDPACKETS;
@@ -24,6 +24,7 @@ public class MenusManager {
         MAIN_MENU = new MenuProvider("main.yml","MainMenus/","./plugins/LegendaryGuildRemapped/MainMenus");
         MEMBERS = new MenuProvider("members.yml","MainMenus/","./plugins/LegendaryGuildRemapped/MainMenus");
         ICONSHOP = new MenuProvider("icons.yml","MainMenus/","./plugins/LegendaryGuildRemapped/MainMenus");
+        LIST = new MenuProvider("list.yml","MainMenus/","./plugins/LegendaryGuildRemapped/MainMenus");
         APPLICATIONS = new MenuProvider("applications.yml","MainMenus/","./plugins/LegendaryGuildRemapped/MainMenus");
         TREE = new MenuProvider("menu.yml", "Tree/","./plugins/LegendaryGuildRemapped/Tree");
         POSITIONS = new MenuProvider("menu.yml","Position/","./plugins/LegendaryGuildRemapped/Position");

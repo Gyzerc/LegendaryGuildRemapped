@@ -291,6 +291,8 @@ public class LegendaryGuild extends JavaPlugin {
         String date = df.format(System.currentTimeMillis());
         return date;
     }
+
+
     public void sync(Runnable consumer){
         scheduler.runTaskAsynchronously(this,consumer);
     }
@@ -308,4 +310,7 @@ public class LegendaryGuild extends JavaPlugin {
     }
 
 
+    public void async(Runnable runnable) {
+        scheduler.runTask(runnable);
+    }
 }

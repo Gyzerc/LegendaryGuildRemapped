@@ -48,7 +48,7 @@ public class MainMenu extends MenuDraw {
                         if (id.hasDisplayName()){
                             itemid.setDisplayName(id.getDisplayName());
                         }
-                        if (legendaryGuild.version_high && itemid.hasCustomModelData()){
+                        if (legendaryGuild.version_high ){
                             itemid.setCustomModelData(icon.getModel());
                         }
                         if (id.hasLore()){

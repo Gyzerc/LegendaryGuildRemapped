@@ -86,6 +86,7 @@ public class RedPacketsMenu extends MenuDraw {
 
     @Override
     public void onClick(InventoryClickEvent e) {
+        e.setCancelled(true);
         if (!dealEssentialsButton(e.getRawSlot())){
             MenuProvider.MenuItem menuItem = provider.getMenuItem(e.getRawSlot());
             User user = legendaryGuild.getUserManager().getUser(p.getName());

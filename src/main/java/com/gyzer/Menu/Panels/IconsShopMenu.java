@@ -51,9 +51,7 @@ public class IconsShopMenu extends MenuDraw {
                     i.setDurability((short) icon.getData());
                     ItemMeta id = i.getItemMeta();
                     if (legendaryGuild.isVersion_high()) {
-                        if (id.hasCustomModelData()) {
-                            id.setCustomModelData(icon.getModel());
-                        }
+                        id.setCustomModelData(icon.getModel());
                     }
                     i.setItemMeta(id);
 

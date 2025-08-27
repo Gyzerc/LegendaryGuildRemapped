@@ -46,7 +46,8 @@ public class Config extends FileProvider {
         DESC_MAX_LENGTH = getValue("settings.guild.introduce-max-line",5);
         NOTICE_MAX_LENGTH = getValue("settings.guild.notice-max-line",5);
 
-        max_length = getValue("settings.create.max-length",6);
+        max_length = Math.min(32,getValue("settings.create.max-length",6));
+
 
         MONEY_TO_POINTS = getValue("settings.guild.moneyToPoints",0.1);
 

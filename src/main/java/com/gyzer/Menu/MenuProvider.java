@@ -91,7 +91,7 @@ public class MenuProvider {
                 ItemMeta id = i.getItemMeta();
                 id.setDisplayName(display);
                 id.setLore(lore);
-                if (model != 0 && legendaryGuild.isVersion_high() && id.hasCustomModelData()) {
+                if (model != 0 && legendaryGuild.isVersion_high()) {
                     id.setCustomModelData(model);
                 }
                 i.setItemMeta(id);

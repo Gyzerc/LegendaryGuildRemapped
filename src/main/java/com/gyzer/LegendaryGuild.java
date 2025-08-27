@@ -3,6 +3,7 @@ package com.gyzer;
 import com.github.Anon8281.universalScheduler.UniversalScheduler;
 import com.github.Anon8281.universalScheduler.scheduling.schedulers.TaskScheduler;
 import com.gyzer.API.Events.NewCycleEvent;
+import com.gyzer.API.LegendaryGuildPlaceholderAPI;
 import com.gyzer.Commands.Commands;
 import com.gyzer.Comp.Sub.ProtocolLibHook;
 import com.gyzer.Configurations.Config;
@@ -17,6 +18,8 @@ import com.gyzer.Manager.Player.UserManager;
 import com.gyzer.Utils.BungeeCord.NetWork;
 import com.gyzer.Utils.BungeeCord.NetWorkHandle;
 import com.gyzer.Utils.MsgUtils;
+import com.gyzer.Utils.UpdateCheck;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -50,8 +53,10 @@ public class LegendaryGuild extends JavaPlugin {
     private CompManager compManager;
     private BuffsManager buffsManager;
     private MenusManager menusManager;
+    private LegendaryGuildPlaceholderAPI guildPlaceholderAPI;
     @Override
     public void onEnable() {
+        long time = System.currentTimeMillis();
         legendaryGuild = this;
         //获取是否高版本
         version_high = BukkitVersionHigh();
@@ -91,11 +96,46 @@ public class LegendaryGuild extends JavaPlugin {
                 checkDate();
             }
         },20,200);
+
+        if (compManager.getPlaceholderAPIHook().isEnable()) {
+            guildPlaceholderAPI = new LegendaryGuildPlaceholderAPI();
+            guildPlaceholderAPI.register();
+        }
+
+        info("&aPlugin enabled. taking &e"+(System.currentTimeMillis() - time)+"ms.",Level.SEVERE);
+
+        Metrics metrics = new Metrics(this, 19359);
+
+        updateCheck();
+    }
+
+    private void updateCheck(){
+        scheduler.runTaskLaterAsynchronously(this, new Runnable() {
+            @Override
+            public void run() {
+                new UpdateCheck(legendaryGuild,114036).getVersion(v ->{
+                    if (legendaryGuild.getDescription().getVersion().equals(v)) {
+                        info("There is not a new update available.",Level.SEVERE);
+                        info("&a当前使用版本为最新版本",Level.SEVERE);
+
+                    } else {
+                        getLogger().info("There is a new update available.");
+                        MsgUtils.sendConsole("当前使用版本: &c"+legendaryGuild.getDescription().getVersion());
+                        MsgUtils.sendConsole("最新版本: &c"+v);
+                        MsgUtils.sendConsole("请前往 &a&nhttps://www.spigotmc.org/resources/legendaryguild-%E2%9C%A8-a-rich-and-powerful-guild-system.114036/ &f获取最新版本.");
+                    }
+                });
+            }
+        },200);
+
     }
 
 
     @Override
     public void onDisable() {
+        if (guildPlaceholderAPI != null) {
+            guildPlaceholderAPI.unregister();
+        }
         databaseManager.close();
         netWork.disable();
     }

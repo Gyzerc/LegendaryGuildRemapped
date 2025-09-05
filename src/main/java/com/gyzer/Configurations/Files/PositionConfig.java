@@ -20,6 +20,8 @@ public class PositionConfig extends FileProvider {
     }
 
     private void read(){
+        reloadFile();
+
         String owner = getValue("owner","会长");
         String member = getValue("default","普通成员");
 

@@ -13,7 +13,13 @@ public abstract class FileProvider {
     protected LegendaryGuild legendaryGuild  = LegendaryGuild.getLegendaryGuild();
     public File file;
     public YamlConfiguration yml;
+    private String fileName;
+    private String internalPath;
+    private String dirPath;
     public FileProvider(String fileName,String internalPath,String dirPath) {
+        this.fileName = fileName;
+        this.dirPath = dirPath;
+        this.internalPath = internalPath;
         file = new File(dirPath , fileName);
         if (!file.exists()) {
             legendaryGuild.saveResource(internalPath+fileName,false);
@@ -21,6 +27,15 @@ public abstract class FileProvider {
         }
         yml = YamlConfiguration.loadConfiguration(file);
         readDefault();
+    }
+
+    protected void reloadFile() {
+        file = new File(dirPath , fileName);
+        if (!file.exists()) {
+            legendaryGuild.saveResource(internalPath+fileName,false);
+            legendaryGuild.info("成功创建配置文件 " + internalPath + fileName, Level.INFO);
+        }
+        yml = YamlConfiguration.loadConfiguration(file);
     }
 
     protected abstract void readDefault();

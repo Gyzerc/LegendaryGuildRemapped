@@ -62,6 +62,9 @@ help_admin:
   - '&8 - reset user teamshop 数量 玩家 &f- &7"重置玩家公会团购礼包购买数据为指定数量"'
   - '&8 - reset user cooldown 时间(s) 玩家 &f- &7"重置玩家的入会冷却时间"'
   - '&8 - teamshop refresh 公会 &f- &7"刷新指定公会的团购礼包"'
+  - '&8 - add 玩家 公会 &f- &7"强制玩家加入指定公会"'
+  - '&8 - kick 玩家 &f- &7"强制玩家退出公会"'
+  - '&8 - position 玩家 职位 &f- &7"强制更改玩家职位(无视职位数量上限)'
   - '&8 - delete 公会 &f- &7"解散指定公会"'
 user:
   recive_points: '&f你的公会贡献点增加了 &a%value%'
@@ -105,6 +108,8 @@ admin:
   teamshop-refresh: '&f你将公会 &e%target% &f的今日团购商品刷新.'
   add-icon: '&f你将公会 &e%target% &f的图标 &e%value% &f解锁！'
   remove-icon: '&f你移除了公会 &e%target% &f的图标 &e%value%'
+  member_add: '&f你将玩家 &e%target% &f加入了公会 &e%value%'
+  position: '&f你将玩家 &e%target% &f的职位更改未 &e%value%'
 default:
   'null': '无'
   guild: '无公会'

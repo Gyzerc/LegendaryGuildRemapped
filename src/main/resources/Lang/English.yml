@@ -62,6 +62,9 @@ help_admin:
   - '&8 - reset user teamshop [amount] [Player] &f- &7"Reset player guild team shop purchase data"'
   - '&8 - reset user cooldown [Second] [Player] &f- &7"Reset the join guild cooldown for player"'
   - '&8 - teamshop refresh [Guild] &f- &7"Refresh team shop item for specified guilds"'
+  - '&8 - add [Player] [Guild] &f- &7"force player join special guild"'
+  - '&8 - kick [Player] &f- &7"force player quit guild"'
+  - '&8 - position [Player] [ID] &f- &7"Forcibly changing player positions (ignoring the maximum number of positions)'
   - '&8 - delete [Guild] &f- &7"Delete guild"'
 user:
   recive_points: '&fYour guild contribution points have increased &a%value%'
@@ -105,6 +108,8 @@ admin:
   teamshop-refresh: '&fYou have refresh the item of teamshop for guild &e%target%'
   add-icon: '&fYou have unlock the icon &e%value% &ffor guild &e%target%'
   remove-icon: '&fYou have remove the icon &e%value% &ffor guild &e%target%'
+  member_add: '&fYou added player &e%target% &fto guild &e%value%'
+  position: '&fYou changed player &e%target% &fposition to &e%value%'
 default:
   'null': 'unknown'
   guild: 'no guild'

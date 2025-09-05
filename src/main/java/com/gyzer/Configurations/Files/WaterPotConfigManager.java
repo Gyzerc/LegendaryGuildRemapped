@@ -31,6 +31,7 @@ public class WaterPotConfigManager extends FileProvider {
     }
 
     public void loadPots() {
+        reloadFile();
         pots = new HashMap<>();
         int a = 0;
         ConfigurationSection section = getSection("pots").orElse(null);

@@ -43,6 +43,9 @@ public class Commands implements CommandExecutor, TabCompleter {
         commands.put("admin",new AdminCommand());
 
         admin_commands.put("maxmembers",new MaxMembersCommand());
+        admin_commands.put("position",new AdminPositionCommand());
+        admin_commands.put("add",new AddCommand());
+        admin_commands.put("kick",new AdminKickCommand());
         admin_commands.put("icon",new IconCommand());
         admin_commands.put("points",new PointsCommand());
         admin_commands.put("reload",new ReloadCommand());

@@ -56,7 +56,7 @@ public class ListMenu extends MenuDraw {
                             i.setDurability((short) icon.getData());
                         }
                         ItemMeta id = i.getItemMeta();
-                        if (legendaryGuild.isVersion_high()) {
+                        if (legendaryGuild.isVersion_high() && icon != null) {
                             id.setCustomModelData(icon.getModel());
                         }
                         i.setItemMeta(id);

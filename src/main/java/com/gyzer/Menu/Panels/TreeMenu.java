@@ -3,6 +3,7 @@ package com.gyzer.Menu.Panels;
 import com.gyzer.API.GuildAPI;
 import com.gyzer.Configurations.Files.GuildTreeConfigManager;
 import com.gyzer.Data.Guild.Guild;
+import com.gyzer.Data.Other.WaterPot;
 import com.gyzer.Data.Player.User;
 import com.gyzer.Data.Player.WaterDataStore;
 import com.gyzer.LegendaryGuild;
@@ -27,10 +28,14 @@ public class TreeMenu extends MenuDraw {
             if (menuItem.getFuction().equals("pot")){
                 WaterDataStore waterDataStore = legendaryGuild.getUserManager().getUser(p.getName()).getWaterDataStore();
                 ItemStack i = menuItem.getItem(p);
-                if (legendaryGuild.getGuildTreeManager().getWaterPot(menuItem.getValue()).isPresent()){
+                WaterPot waterPot = legendaryGuild.getGuildTreeManager().getWaterPot(menuItem.getValue()).orElse(null);
+                if (waterPot != null){
                     String pot = menuItem.getValue();
+
+
                     ReplaceHolderUtils replaceHolderUtils = new ReplaceHolderUtils()
-                            .addSinglePlaceHolder("use",waterDataStore.getAmount(pot, WaterDataStore.WaterDataType.TODAY)+"");
+                            .addSinglePlaceHolder("use",waterDataStore.getAmount(pot, WaterDataStore.WaterDataType.TODAY)+"")
+                            .addSinglePlaceHolder("max",waterPot.getLimit_day()+"");
                     menuItem.setItem(replaceHolderUtils.startReplace(i,true,p.getName()));
                     menuItem.setPut(true);
                 }

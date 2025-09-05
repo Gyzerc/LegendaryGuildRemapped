@@ -9,6 +9,7 @@ import com.gyzer.Utils.MsgUtils;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -25,6 +26,7 @@ public class BuffsConfigManager extends FileProvider {
     }
 
     public void readBuffs() {
+        reloadFile();
         caches = new LinkedHashMap<>();
         if (!buffsManager.isEnable()) return;
         int a = 0;

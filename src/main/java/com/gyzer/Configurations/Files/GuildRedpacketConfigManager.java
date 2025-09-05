@@ -13,7 +13,7 @@ public class GuildRedpacketConfigManager extends FileProvider {
         this.guildRedpacketManager = guildRedpacketManager;
         guildRedpacketManager.setEnable(getValue("enable",true));
         MIN_REDPACKET_AMOUNT = getValue("redpacket.min_amount",2);
-        MIN_REDPACKET_TOTAL = getValue("redpacket。min_total",100.0);
+        MIN_REDPACKET_TOTAL = getValue("redpacket.min_total",100.0);
     }
 
     @Override

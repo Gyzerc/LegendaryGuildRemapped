@@ -34,6 +34,8 @@ public class GuildTreeConfigManager extends FileProvider {
     }
 
     public void reload() {
+        reloadFile();
+
         TREEEXP = new HashMap<>();
         TREE_REQUIREMENTS = new HashMap<>();
         WISH = new HashMap<>();

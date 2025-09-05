@@ -25,6 +25,7 @@ public class GuildShopConfigManager extends FileProvider {
     }
 
     public void loadItems() {
+        reloadFile();
         int a = 0;
         ConfigurationSection section = getSection("items").orElse(null);
         if (section != null){

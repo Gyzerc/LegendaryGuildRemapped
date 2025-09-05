@@ -83,6 +83,8 @@ public class Language extends FileProvider {
     public String admin_teamshop_refresh;
     public String admin_add_icon;
     public String admin_remove_icon;
+    public String admin_add_member;
+    public String admin_position;
     public String default_null;
     public String default_guild;
     public String default_position;
@@ -288,6 +290,8 @@ public class Language extends FileProvider {
         this.admin_teamshop_refresh = MsgUtils.color(getValue("admin.teamshop-refresh","&fYou have refresh the item of teamshop for guild &e%target%"));
         this.admin_add_icon = MsgUtils.color(getValue("admin.add-icon","&fYou have unlock the icon &e%value% &ffor guild &e%target%"));
         this.admin_remove_icon = MsgUtils.color(getValue("admin.remove-icon","&fYou have remove the icon &e%value% &ffor guild &e%target%"));
+        this.admin_add_member = MsgUtils.color(getValue("admin.member_add","&fYou added player &e%target% &fto guild &e%value%"));
+        this.admin_position = MsgUtils.color(getValue("admin.position","&fYou changed player &e%target% &fposition to &e%value%"));
 
         this.default_null = MsgUtils.color(getValue("default.null","无"));
         this.default_guild = MsgUtils.color(getValue("default.guild","无公会"));

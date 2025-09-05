@@ -4,7 +4,7 @@ enable: true
 redpacket:
   #最低红包金额
   #Minimum red packet money
-  min_total: 100
+  min_total: 100.0
   #最低红包个数
   #Minimum number of red packet
   min_amount: 2
